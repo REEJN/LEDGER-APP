@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Source+Serif+4:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+:root,
+[data-theme="ledger"] {
+  --paper: #F6F3EC;
+  --paper-raised: #FFFFFF;
+  --ink: #241F1A;
+  --ink-soft: #635A4E;
+  --plum: #3D2645;
+  --plum-soft: #6B4E76;
+  --gold: #B8862E;
+  --gold-soft: #E8D9B5;
+  --line: #E2DACB;
+  --danger: #A13A2B;
+  --done: #5C7A5E;
+  --on-plum: #FFFFFF;
+  --hover: rgba(0, 0, 0, 0.05);
+  --hover-strong: rgba(0, 0, 0, 0.1);
+  --active: rgba(0, 0, 0, 0.12);
+  --error-bg: #F4DED9;
+  --muted-bg: rgba(0, 0, 0, 0.02);
+}
+
+[data-theme="dark"] {
+  --paper: #16161F;
+  --paper-raised: #1E1E28;
+  --ink: #E6E6E6;
+  --ink-soft: #9B9BA6;
+  --plum: #D8A5FF;
+  --plum-soft: #B78ADD;
+  --gold: #E8C07A;
+  --gold-soft: #4A4130;
+  --line: #2E2E3C;
+  --danger: #F48771;
+  --done: #7FC98F;
+  --on-plum: #14141C;
+  --hover: rgba(255, 255, 255, 0.06);
+  --hover-strong: rgba(255, 255, 255, 0.12);
+  --active: rgba(255, 255, 255, 0.14);
+  --error-bg: #43262A;
+  --muted-bg: rgba(255, 255, 255, 0.03);
+}
+
+[data-theme="dusk"] {
+  --paper: #F4EEFA;
+  --paper-raised: #FFFFFF;
+  --ink: #2B1E3A;
+  --ink-soft: #6E5B85;
+  --plum: #7A3FA6;
+  --plum-soft: #9A6FC1;
+  --gold: #B8762E;
+  --gold-soft: #EDE1F5;
+  --line: #E2D3EF;
+  --danger: #AD3A5B;
+  --done: #5C8A6E;
+  --on-plum: #FFFFFF;
+  --hover: rgba(122, 63, 166, 0.08);
+  --hover-strong: rgba(122, 63, 166, 0.14);
+  --active: rgba(122, 63, 166, 0.16);
+  --error-bg: #F6DCE4;
+  --muted-bg: rgba(122, 63, 166, 0.04);
+}
+
+[data-theme="forest"] {
+  --paper: #EFF4EC;
+  --paper-raised: #FFFFFF;
+  --ink: #22301F;
+  --ink-soft: #5F7360;
+  --plum: #3E7C55;
+  --plum-soft: #5F9A72;
+  --gold: #A67C2E;
+  --gold-soft: #DCE9D9;
+  --line: #D5E0D2;
+  --danger: #A8443A;
+  --done: #2E6B45;
+  --on-plum: #FFFFFF;
+  --hover: rgba(62, 124, 85, 0.08);
+  --hover-strong: rgba(62, 124, 85, 0.14);
+  --active: rgba(62, 124, 85, 0.16);
+  --error-bg: #F4DEDA;
+  --muted-bg: rgba(62, 124, 85, 0.04);
+}
+
+[data-theme="ocean"] {
+  --paper: #EAF2F6;
+  --paper-raised: #FFFFFF;
+  --ink: #1E2C36;
+  --ink-soft: #537082;
+  --plum: #2F6F9E;
+  --plum-soft: #4E8AB5;
+  --gold: #A8762E;
+  --gold-soft: #D6E6EF;
+  --line: #CFDFE8;
+  --danger: #A8443A;
+  --done: #3B7A68;
+  --on-plum: #FFFFFF;
+  --hover: rgba(47, 111, 158, 0.08);
+  --hover-strong: rgba(47, 111, 158, 0.14);
+  --active: rgba(47, 111, 158, 0.16);
+  --error-bg: #F4DEDA;
+  --muted-bg: rgba(47, 111, 158, 0.04);
+}
+
+* {
+  border-color: var(--line);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Source Serif 4', serif;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.font-display {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: "opsz" 144;
+  font-optical-sizing: auto;
+  letter-spacing: -0.015em;
+  line-height: 1.1;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.02em;
+}
+
+.type-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.type-lead {
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+
+.focus-ring:focus {
+  outline: 2px solid var(--plum);
+  outline-offset: 1px;
+}
