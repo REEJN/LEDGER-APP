@@ -28,20 +28,20 @@ export default async function AdminPage() {
   const totalStorage = (files ?? []).reduce((sum, f) => sum + (f.file_size || 0), 0);
 
   return (
-    <div className="min-h-screen px-8 py-12 max-w-5xl mx-auto">
+    <div className="min-h-screen px-4 py-10 sm:px-8 sm:py-12 max-w-5xl mx-auto">
       <p className="type-eyebrow mb-2" style={{ color: "var(--gold)" }}>
         Admin
       </p>
-      <h1 className="font-display text-4xl mb-8" style={{ color: "var(--ink)" }}>Workspace overview</h1>
+      <h1 className="font-display text-3xl sm:text-4xl mb-8" style={{ color: "var(--ink)" }}>Workspace overview</h1>
 
-      <div className="grid grid-cols-4 gap-4 mb-10">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-10">
         <StatCard label="Users" value={(users ?? []).length} />
         <StatCard label="Notes" value={(notes ?? []).length} />
         <StatCard label="To-do lists" value={(todoLists ?? []).length} />
         <StatCard label="Storage used" value={`${(totalStorage / (1024 * 1024)).toFixed(1)} MB`} />
       </div>
 
-      <div className="rounded-lg border overflow-hidden" style={{ borderColor: "var(--line)" }}>
+      <div className="rounded-lg border overflow-x-auto" style={{ borderColor: "var(--line)" }}>
         <table className="w-full text-sm">
           <thead>
             <tr style={{ background: "var(--paper-raised)" }}>

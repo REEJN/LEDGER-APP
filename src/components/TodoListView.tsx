@@ -42,7 +42,7 @@ export function TodoListView({
   const remaining = optimisticItems.filter((i) => !i.is_done).length;
 
   return (
-    <div className="max-w-2xl mx-auto px-8 py-12">
+    <div className="max-w-2xl mx-auto px-4 py-10 sm:px-8 sm:py-12">
       <div className="flex items-center justify-between mb-2">
         <span className="type-eyebrow" style={{ color: "var(--gold)" }}>
           {remaining} remaining
@@ -69,7 +69,7 @@ export function TodoListView({
         value={title}
         onChange={(e) => setTitle(e.target.value)}
         onBlur={() => title !== list.title && renameTodoList(list.id, title)}
-        className="w-full font-display text-4xl mb-8 outline-none bg-transparent focus-ring rounded-sm"
+        className="w-full font-display text-3xl sm:text-4xl mb-8 outline-none bg-transparent focus-ring rounded-sm"
         style={{ color: "var(--ink)" }}
       />
 
@@ -123,7 +123,7 @@ export function TodoListView({
             </span>
             <button
               onClick={() => remove(item.id)}
-              className="opacity-0 group-hover:opacity-100 text-xs font-mono hover:underline cursor-pointer"
+              className="opacity-100 sm:opacity-0 sm:group-hover:opacity-100 text-xs font-mono hover:underline cursor-pointer"
               style={{ color: "var(--danger)" }}
             >
               remove

@@ -28,8 +28,8 @@ export function FilesView({ files }: { files: FileRecord[] }) {
   const [error, setError] = useState<string | null>(null);
 
   return (
-    <div className="max-w-3xl mx-auto px-8 py-12">
-      <h1 className="font-display text-4xl mb-2" style={{ color: "var(--ink)" }}>Files</h1>
+    <div className="max-w-3xl mx-auto px-4 py-10 sm:px-8 sm:py-12">
+      <h1 className="font-display text-3xl sm:text-4xl mb-2" style={{ color: "var(--ink)" }}>Files</h1>
       <p className="text-sm mb-8" style={{ color: "var(--ink-soft)" }}>
         Upload personal files — only you (and admins) can see them.
       </p>

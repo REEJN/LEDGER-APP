@@ -27,7 +27,7 @@ export default async function DashboardLayout({
         folders={folders ?? []}
         profile={profile ?? null}
       />
-      <main className="flex-1 min-w-0">{children}</main>
+      <main className="flex-1 min-w-0 pt-14 lg:pt-0">{children}</main>
     </div>
   );
 }

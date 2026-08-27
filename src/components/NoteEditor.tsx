@@ -33,7 +33,7 @@ export function NoteEditor({ note }: { note: Note }) {
   }, [title, content]);
 
   return (
-    <div className="max-w-3xl mx-auto px-8 py-12">
+    <div className="max-w-3xl mx-auto px-4 py-10 sm:px-8 sm:py-12">
       <div className="flex items-center justify-between mb-6">
         <span
           className="text-xs font-mono"
@@ -71,7 +71,7 @@ export function NoteEditor({ note }: { note: Note }) {
         value={title}
         onChange={(e) => setTitle(e.target.value)}
         placeholder="Untitled"
-        className="w-full font-display text-4xl mb-6 outline-none bg-transparent focus-ring rounded-sm"
+        className="w-full font-display text-3xl sm:text-4xl mb-6 outline-none bg-transparent focus-ring rounded-sm"
         style={{ color: "var(--ink)" }}
       />
 

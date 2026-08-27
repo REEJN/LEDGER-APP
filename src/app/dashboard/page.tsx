@@ -25,15 +25,15 @@ export default async function DashboardHome() {
   const name = profile?.full_name || profile?.email?.split("@")[0] || "there";
 
   return (
-    <div className="max-w-3xl mx-auto px-8 py-16">
+    <div className="max-w-3xl mx-auto px-4 py-10 sm:px-8 sm:py-16">
       <p className="type-eyebrow mb-2" style={{ color: "var(--gold)" }}>
         {new Date().toLocaleDateString(undefined, { weekday: "long", month: "long", day: "numeric" })}
       </p>
-      <h1 className="font-display text-4xl mb-8" style={{ color: "var(--ink)" }}>
+      <h1 className="font-display text-3xl sm:text-4xl mb-8" style={{ color: "var(--ink)" }}>
         Welcome back, {name}
       </h1>
 
-      <div className="grid grid-cols-3 gap-4 mb-10">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-10">
         <form action={createNote.bind(null, null)}>
           <button className="w-full text-left p-5 rounded-lg border transition hover:shadow-sm focus-ring" style={{ background: "var(--paper-raised)", borderColor: "var(--line)" }} title="New note">
             <p className="font-display text-lg mb-1">New note</p>
@@ -57,9 +57,9 @@ export default async function DashboardHome() {
         <ul className="divide-y rounded-lg border overflow-hidden" style={{ borderColor: "var(--line)", background: "var(--paper-raised)" }}>
           {recentFiles.map((f) => (
             <li key={f.id}>
-              <Link href="/dashboard/files" className="flex items-center justify-between px-4 py-3 hover:bg-[var(--hover)] transition-colors">
-                <span className="truncate font-medium" style={{ color: "var(--ink)" }}>{f.file_name}</span>
-                <span className="ml-4 text-xs font-mono shrink-0" style={{ color: "var(--ink-soft)" }}>
+              <Link href="/dashboard/files" className="flex items-center justify-between gap-3 px-4 py-3 hover:bg-[var(--hover)] transition-colors">
+                <span className="truncate min-w-0 font-medium" style={{ color: "var(--ink)" }}>{f.file_name}</span>
+                <span className="text-xs font-mono shrink-0" style={{ color: "var(--ink-soft)" }}>
                   {formatSize(f.file_size)} · {new Date(f.created_at).toLocaleDateString()}
                 </span>
               </Link>

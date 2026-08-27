@@ -27,12 +27,12 @@ export function ScheduleView({ events }: { events: CalendarEvent[] }) {
   }, [events]);
 
   return (
-    <div className="max-w-4xl mx-auto px-8 py-12">
-      <h1 className="font-display text-4xl mb-6" style={{ color: "var(--ink)" }}>
+    <div className="max-w-4xl mx-auto px-4 py-10 sm:px-8 sm:py-12">
+      <h1 className="font-display text-3xl sm:text-4xl mb-6" style={{ color: "var(--ink)" }}>
         Schedule
       </h1>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
         <div className="lg:col-span-2">
           <div className="flex items-center justify-between mb-4">
             <h2 className="font-display text-xl" style={{ color: "var(--ink)" }}>
@@ -67,7 +67,7 @@ export function ScheduleView({ events }: { events: CalendarEvent[] }) {
                 return (
                   <div
                     key={day.toISOString()}
-                    className={`min-h-[5.5rem] border-t px-1.5 py-1 ${i % 7 !== 6 ? "border-r" : ""}`}
+                    className={`min-h-[4.5rem] sm:min-h-[5.5rem] border-t px-1 py-1 ${i % 7 !== 6 ? "border-r" : ""}`}
                     style={{
                       borderColor: "var(--line)",
                       background: inMonth ? undefined : "var(--muted-bg)",
