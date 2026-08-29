@@ -1,37 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ledger
+
+Ledger is a personal workspace web app for organizing notes, to-do lists, files, folders, and schedules in one clean dashboard. It is built as a Notion-inspired productivity app where users can sign in, create their own workspace content, and keep important information in one place.
+
+## What The App Is About
+
+Ledger helps users manage everyday work and study materials through a simple private dashboard. Instead of keeping notes, tasks, files, and schedules in separate places, the app brings them together inside one account-based workspace.
+
+Users can create notes, build to-do lists, upload files, organize items into folders, and view scheduled events. The app also includes an admin area where an admin user can monitor workspace activity such as users, notes, lists, files, and total storage usage.
+
+## Main Features
+
+- User authentication with login and signup
+- Personal dashboard for each user
+- Notes management
+- To-do list management
+- Folder organization for notes and lists
+- File upload and recent file viewing
+- Schedule/calendar support
+- Theme customization
+- Admin dashboard for workspace overview
+- Supabase-backed database and authentication
+
+## Tech Stack
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Supabase
+- lucide-react icons
+- date-fns
+
+## Project Structure
+
+```text
+src/app              Main Next.js app routes
+src/app/(auth)       Authentication pages
+src/app/dashboard    User dashboard pages
+src/app/admin        Admin workspace overview
+src/app/actions      Server actions for app features
+src/components       Reusable UI components
+src/lib              Supabase clients and shared types
+```
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open the app in your browser:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Available Scripts
 
-## Learn More
+```bash
+npm run dev      Start the development server
+npm run build    Build the production app
+npm run start    Start the production server
+npm run lint     Run ESLint
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Notes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-"# APP" 
+This project uses Supabase, so it needs the correct Supabase environment variables and database tables configured before the full app can run properly.
